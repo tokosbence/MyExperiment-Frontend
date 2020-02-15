@@ -1,0 +1,58 @@
+<app-userheader></app-userheader>
+<mat-card>
+    <mat-toolbar>
+      <span>Login</span>
+    </mat-toolbar>
+    <mat-card-content>
+        <form >
+          <mat-form-field>
+            <input matInput placeholder="Username" name="username" [(ngModel)]="model.username" #name="ngModel">
+
+          </mat-form-field>
+            <br>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="model.password" #name="ngModel"> 
+
+          
+          </mat-form-field>
+            <br>
+          <button mat-raised-button color="primary" (click)="login(model)">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+<!--
+<div class="container">
+  
+  <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+     
+   <div class="form-input" [ngClass]="{'has-error': f.submitted && !username.valid}">
+       <i class="fa fa-user fa-2x cust" aria-hidden="true"></i>
+      
+       <input type="text" name="username" placeholder="Enter Username" [(ngModel)]="model.username" #username="ngModel" required  >
+ 
+        <span *ngIf="f.submitted && !username.valid" class="help-block">Username is required</span>
+     
+     </div>
+     
+     <div class="form-input" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+       <i class="fa fa-lock fa-2x cust" aria-hidden="true"></i>
+       
+       <input type="password" name="password" placeholder="Enter Password" [(ngModel)]="model.password" #password="ngModel" required >
+     
+       <span *ngIf="f.submitted && !password.valid" class="help-block">Password is required</span>
+ 
+     </div>
+     
+     <div class="checkbox">
+       <label>
+         <input type="checkbox">
+         Remember me
+         </label>
+     </div>
+     
+     <input type="submit" name="submit" value="Login" class="btn-login"> <br>
+     <a href="#">Forget password?</a>
+   </form>
+ </div>
+-->

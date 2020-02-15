@@ -1,0 +1,32 @@
+<app-userheader></app-userheader>
+<mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper" *ngFor="let experiment of experiments">
+  <mat-step >
+      <img src="{{experiment.picpath}}">
+      <ng-template matStepLabel>Ce faci?</ng-template>
+      <h2>{{experiment.name}}</h2>
+      <div>
+        {{experiment.what}}
+      </div>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+  </mat-step>
+  <mat-step >
+    
+      <ng-template matStepLabel>Ce se intampla?</ng-template>
+      {{experiment.why}}
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Explicatie:</ng-template>
+    {{experiment.expl}}
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

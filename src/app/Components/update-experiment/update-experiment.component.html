@@ -1,0 +1,27 @@
+<app-adminheader></app-adminheader>
+<h1>Update experiment</h1>
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Nume" name="experimentname" [(ngModel)]="experiment.name" #name="ngModel" ></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Ce faci?" name="experimentwhat" [(ngModel)]="experiment.what" #name="ngModel"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Ce se intampla?" name="experimentwhy" [(ngModel)]="experiment.why" #name="ngModel"></textarea>
+     </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Explicatie" name="experimentexpl" [(ngModel)]="experiment.expl" #name="ngModel"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Video_URL" name="experimenturl" [(ngModel)]="experiment.videourl" #name="ngModel"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="updateExperiment()" routerLink="/admin/experiments" >Update</button>
+  <button mat-raised-button color="primary"  routerLink="/admin/experiments" >Back</button>
+  </form>

@@ -1,0 +1,50 @@
+<app-adminheader></app-adminheader>
+<h1>Add a new experiment</h1>
+
+<div [formGroup]="imageForm" ngNativeValidate>
+  
+  <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="logo">Experiment Picture</label>
+        <input id="logo" formControlName="logo" type="file" class="form-control is-valid" id="logo" #logoo>
+            
+        <div class="invalid-feedback" *ngIf="!imageForm.controls['logo'].valid &&imageForm.controls['logo'].touched">
+          Picture
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <button mat-raised-button color="primary" type="submit" (click)="addLogo(logoo.value)" >AddPicture</button>
+</div>
+<br>
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Name" name="experimentname" [(ngModel)]="newExperiment.name" #name="ngModel" >
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Ce faci?" name="experimentwhat" [(ngModel)]="newExperiment.what" #name="ngModel"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Ce se intampla?" name="experimentwhy" [(ngModel)]="newExperiment.why" #name="ngModel"></textarea>
+     </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Explicatie" name="experimentexpl" [(ngModel)]="newExperiment.expl" #name="ngModel"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Video_URL" name="experimenturl" [(ngModel)]="newExperiment.videourl" #name="ngModel"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addExperiment(newExperiment)" routerLink="/admin/experiments" >Save Experiment</button>
+</form>
+<!-- <`routerLink="/experiments"-->
+<!-- Innnen-->
+ 
+<!-- ide-->
+<!--(click)="addLogo(logoo.value)"-->

@@ -1,0 +1,46 @@
+<app-userheader></app-userheader>
+<table width="100%" >
+  <tr>
+    <td align="center" colspan="2">
+      <h1 >Experimentarium Timisoara</h1>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:50%; height:50%" valign = "top" align="center">
+      <mat-card  class="example-card">
+          <img src="assets/dexp.jpg"  class="example-card" >
+          <mat-card-content>
+            <h3>
+                Experimentele au fost filmate in cadrul programului ,,Reforma predarii fizicii in invatamantul preuniversitar”, implementat de Societatea Romana de Fizica. Finantatorul programului este Romanian- American Foundation.
+                Scopul programului este de a contribui la reformarea metodelor de predare / invatare pentru a imbunatati competentele elevilor in stiintele exacte si pentru a forma abilitati necesare pe piata muncii.
+            </h3>
+          </mat-card-content>
+      </mat-card>
+      
+    </td>
+    <td valign = "top">
+        <mat-card>
+          <mat-card-header>
+              <mat-card-title><h2>Location:</h2></mat-card-title>
+          </mat-card-header>
+            <mat-card-content>
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="17">
+                    <agm-marker [latitude]="lat" [longitude]="lng" [label]="title"></agm-marker>
+                </agm-map>
+            </mat-card-content>
+        </mat-card>
+      <p>Detalii suplimentare puteti obtine de la echipa de proiect:
+          Cristian Hatu: Manager de program – chatu@srfizica.ro
+          
+          Prof. univ. dr. Mihai Girtu: Coordonator Birou proiect – mihai.girtu@univ-ovidius.ro
+          
+          Conf. univ. dr. Mihail Lungu: Membru Birou proiect – lmihaister@gmail.com
+          
+          Prof. Ion Bararu: Membru Birou proiect - ionbararu@yahoo.com
+          
+          Adriana Niculae: Coordonator activitati – aniculae@srfizica.ro
+          
+          </p>
+    </td> 
+  </tr>
+</table>

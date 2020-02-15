@@ -1,0 +1,29 @@
+<!--<table width="100%" border="2">
+    <tr>
+      <th>Name</th>
+      <th>What</th>
+      <th>Why</th>
+    </tr>
+    <tr *ngFor="let experiment of experiments">
+      <td>{{experiment.name}}</td>
+      <td>{{experiment.what}}</td>
+      <td>{{experiment.why}}</td>
+    </tr>
+  </table> -->
+  <app-userheader></app-userheader>
+  <mat-card *ngFor="let experiment of experiments">
+    <mat-card-title>  {{experiment.name}}  </mat-card-title>
+    <img src="{{experiment.picpath}}">
+    <mat-card-content ng-show="showme">
+        <h2>Ce faci?</h2>
+       <p>{{experiment.what}}</p><br>
+
+        <h2>Ce se întâmplă?</h2>
+        <p>{{experiment.why}}</p><br>
+
+        <h2>Explicaţie</h2>
+        <p>{{experiment.expl}}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+    </mat-card-actions>
+  </mat-card>

@@ -1,0 +1,10 @@
+
+.toolbar{
+    margin:0;
+    justify-content: space-between;
+}
+
+.admin{
+    flex: 1 1 auto;
+  text-align: right;
+}

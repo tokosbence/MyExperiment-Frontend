@@ -1,0 +1,61 @@
+<app-adminheader></app-adminheader>
+
+<mat-tab-group color="warn">
+        <mat-tab color="primary" label="Grupele de astazi ({{groupsToday.length}})">
+            <mat-card *ngFor = "let item of groupsToday">
+    
+            
+                <mat-card-title> {{item.nume}} {{item.prenume}}</mat-card-title>
+                 <mat-card-content >
+                <h3>Ora sosire:</h3>
+                <p> {{item.orasos}}</p><br>
+        
+                <h3>Studentii:</h3>
+                <p>{{item.nrstudent}}</p><br>
+        
+                <h3>Profesori:</h3>
+                <p>{{item.nrprof}}</p><br>
+        
+                <h3>E-mail:</h3>
+                <p>{{item.email}}</p>
+        
+                <h3>Tel:</h3>
+                <p>{{item.tel}}</p>
+            </mat-card-content>
+            </mat-card>
+        </mat-tab>
+
+        <mat-tab label="Toate grupele">
+                <h2>Total: {{groups.length}}</h2>
+                <mat-card *ngFor="let group of groups">  
+                        <mat-card-title>{{group.nume}} {{group.prenume}}</mat-card-title>
+                        <mat-card-content >
+                            <h3>Date:</h3>
+                           <p>{{group.date}} {{group.orasos}}</p><br>
+                    
+                            <h3>Studentii:</h3>
+                            <p>{{group.nrstudent}}</p><br>
+                    
+                            <h3>Profesori:</h3>
+                            <p>{{group.nrprof}}</p><br>
+                    
+                            <h3>E-mail:</h3>
+                            <p>{{group.email}}</p>
+                        </mat-card-content>
+                        <mat-card-actions align="end">
+                        
+                        </mat-card-actions>
+                      </mat-card>
+        </mat-tab>
+
+        <mat-tab  color="primary" label="Statistica">
+            <h1>Total vizitator: {{totalvizitatori}}</h1>
+
+            <h1>Total Student: {{totalstudenti}}</h1>
+
+            <h1>Total Profesor: {{totalprof}}</h1>
+        </mat-tab>
+</mat-tab-group>
+
+
+

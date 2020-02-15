@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1><b>Res</b></h1>
+  <br>
+  
+  
+
+  <div [formGroup]="imageForm" ngNativeValidate>
+  
+      <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="logo">LOGO</label>
+            <input id="logo" formControlName="logo" type="file" class="form-control is-valid" id="logo" #logoo>
+                
+            <div class="invalid-feedback" *ngIf="!imageForm.controls['logo'].valid &&imageForm.controls['logo'].touched">
+           LOGOMI
+            </div>
+          </div>
+        </div>
+
+     
+
+    <button class="btn btn-primary" type="submit" (click)="addLogo(logoo.value)">AddRess</button>
+  </div>
+</div>
+
+

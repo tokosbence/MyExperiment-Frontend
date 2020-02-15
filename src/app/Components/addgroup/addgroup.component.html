@@ -1,0 +1,52 @@
+<app-userheader></app-userheader>
+<form align="center">
+  <mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="date" [(ngModel)]="newGroup.date" #name="ngModel">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Ora sosirii" name="orasos" [(ngModel)]="newGroup.orasos" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Nr de student" name="nrdeelevi" [(ngModel)]="newGroup.nrstudent" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Nr de profesori" name="nrdeprofesori" [(ngModel)]="newGroup.nrprof" #name="ngModel"  >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Clasa" name="clasa" [(ngModel)]="newGroup.clas" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Nume" name="nume" [(ngModel)]="newGroup.nume" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Prenume" name="prenume" [(ngModel)]="newGroup.prenume" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="E-mail" name="email" [(ngModel)]="newGroup.email" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <mat-form-field >
+    <input matInput placeholder="Tel" name="tel" [(ngModel)]="newGroup.tel" #name="ngModel" >
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="warn" (click)="addGroup(newGroup)" routerLink="/">Trimite</button>
+
+</form>
